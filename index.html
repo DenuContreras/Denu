@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save the Date 💘</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      color: #ff7b7b;
+    }
+
+    button:hover {
+      background-color: #fff;
+      transform: scale(1.05);
+    }
+
+    #mensaje {
+      margin-top: 30px;
+      font-size: 1.4em;
+      font-weight: 600;
+      display: none;
+      color: #ffb6b9;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Save the Date</h1>
+    <p>14 de febrero — vos y nosotras, Bad Bunny 💘</p>
+    <div class="buttons">
+      <button id="btnSi">Sí</button>
+      <button id="btnNo">No</button>
+    </div>
+    <div id="mensaje">Sabía que ibas a decir que sí 😏</div>
+  </div>
+
+  <script>
+    const btnSi = document.getElementById('btnSi');
+    const mensaje = document.getElementById('mensaje');
+
+    btnSi.addEventListener('click', () => {
+      mensaje.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
